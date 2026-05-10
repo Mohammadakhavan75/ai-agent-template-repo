@@ -1,0 +1,23 @@
+name: AI Change Policy
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  ai-change-policy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run AI change policy check
+        env:
+          BASE_REF: origin/main
+        run: |
+          python3 scripts/check_ai_change_policy.py

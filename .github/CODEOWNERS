@@ -1,0 +1,8 @@
+# Customize owners for your project.
+
+/AGENTS.md @your-org/maintainers
+/ai/context/ @your-org/maintainers
+/docs/invariants/ @your-org/maintainers
+/docs/adr/ @your-org/maintainers
+.github/workflows/ @your-org/maintainers
+scripts/check_ai_change_policy.py @your-org/maintainers
